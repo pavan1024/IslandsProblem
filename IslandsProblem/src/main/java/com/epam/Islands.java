@@ -9,7 +9,7 @@ class Islands {
 
 	public static void main(String[] args) {
 //		int[][] array = { { 1, 0, 0, 0 }, { 0, 1, 1, 0 }, { 0, 1, 0, 0 } };
-		int[][] array = new int[100][100];
+		
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -17,6 +17,7 @@ class Islands {
 		int r = scan.nextInt();
 		log.info("Enter number of columns");
 		int c = scan.nextInt();
+		int[][] array = new int[r][c];
 		int islands = 0;
 		log.info("enter elements");
 		for (int i = 0; i < r; i++) {
@@ -24,9 +25,7 @@ class Islands {
 				array[i][j]=scan.nextInt();
 			}
 		}
-		
-		
-		
+
 		for (int i = 0; i < r; i++) {
 			for (int j = 0; j < c; j++) {
 				if (array[i][j] == 1) {
@@ -34,7 +33,6 @@ class Islands {
 					islands++;
 				}
 			}
-			
 		}
 		
 		log.info(String.valueOf(islands));
